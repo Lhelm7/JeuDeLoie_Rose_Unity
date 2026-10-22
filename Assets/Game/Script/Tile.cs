@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class Tile : MonoBehaviour
 {
     public int number;
-    [SerializeField] TMP_Text label; // optionnel : affiche le numéro sur la case
+    [SerializeField] TMP_Text _Name; // affiche le nom de la case (ex si est une case spécial) 
 
     public UnityEvent<PlayerPawn> onPlayerLanded;
 
@@ -13,6 +13,6 @@ public class Tile : MonoBehaviour
 
     public void UpdateLabel()
     {
-        if (label != null) label.text = number.ToString();
+        if (_Name!= null) _Name.text = number.ToString();
     }
 }

@@ -4,9 +4,10 @@ public class Board : MonoBehaviour
 {
     public Tile[] tiles;
 
-    public int NextIndex(int index) => (index + 1) % tiles.Length; // le plateau boucle
-
-    // clic droit sur le composant → "Remplir depuis les enfants"
+    public int StepIndex(int index, int direction)
+    {
+        return (index + direction + tiles.Length) % tiles.Length;
+    }
     [ContextMenu("Remplir depuis les enfants")]
     void FillFromChildren()
     {
