@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7117094016381071588
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1045128862761775090, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_Name
+      value: WrongTile Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193799670013194755, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: number
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193799670013194755, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: onPlayerLanded.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 699601305878319473}
+    - target: {fileID: 5193799670013194755, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: onPlayerLanded.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Apply
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193799670013194755, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: onPlayerLanded.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: TileEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193799670013194755, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: onPlayerLanded.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.099999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.132
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7744580777968564370, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1045128862761775090, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 699601305878319473}
+  m_SourcePrefab: {fileID: 100100000, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+--- !u!1 &7801910644489314070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1045128862761775090, guid: 1725e67393b6ecc45b19127063a570f7, type: 3}
+  m_PrefabInstance: {fileID: 7117094016381071588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &699601305878319473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7801910644489314070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d85f134287f1642b1d2deb5cc4f720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileEvent
+  steps: 2
