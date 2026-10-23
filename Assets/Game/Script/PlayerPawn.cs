@@ -7,8 +7,8 @@ public class PlayerPawn : MonoBehaviour
     [SerializeField] Board board;
     [SerializeField] Vector3 offset = new Vector3(0, 0.6f, 0);
     [SerializeField] float moveSpeed = 8f;
-    [SerializeField] float delayBeforeMove = 1f;     // pause entre le résultat du dé et le 1er pas
-    [SerializeField] float pauseBetweenSteps = 0.2f; // pause après chaque case
+    [SerializeField] float delayBeforeMove = 1f;     // légère pause entre l'affichage du résultat du dé et le 1er déplacement
+    [SerializeField] float pauseBetweenSteps = 0.2f; // delay avant chaque case 
 
     public UnityEvent onMoveStarted;
     public UnityEvent onMoveEnded;
@@ -20,13 +20,13 @@ public class PlayerPawn : MonoBehaviour
 
     void Start()
     {
-        // charge la case sauvegardée (0 si aucune sauvegarde)
+        // Si sauvegarde existante => charge la case sauvegardée (si aucune sauvegarde Index 0 cas ede départ)
         CurrentIndex = PlayerPrefs.GetInt(SaveKey, 0);
         CurrentIndex = Mathf.Clamp(CurrentIndex, 0, board.tiles.Length - 1);
         transform.position = board.tiles[CurrentIndex].transform.position + offset;
     }
 
-    // positif = avance, négatif = recule
+    // fonction move by positif = avance, négatif = recule
     public void MoveBy(int steps)
     {
         if (IsMoving || steps == 0) return;
@@ -65,14 +65,14 @@ public class PlayerPawn : MonoBehaviour
 
         if (!IsMoving) onMoveEnded.Invoke();
     }
-
+//Système de save de la position du player (enregistre l'index de la case sur laquel est le joueur, à chaque déplacements)
     void Save()
     {
         PlayerPrefs.SetInt(SaveKey, CurrentIndex);
         PlayerPrefs.Save();
     }
 
-    // à brancher sur un bouton "Nouvelle partie"
+    // Pas dans le projet pour le moment, à faire mettre sur un input afin de reset la save (position du player)
     public void ResetProgress()
     {
         if (IsMoving) return;
